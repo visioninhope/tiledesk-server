@@ -23,7 +23,7 @@ var config = require('../../config/database');
 var configGlobal = require('../../config/global');
 
 var widgetConfig = require('../../config/widget');
-var widgetTestLocation = process.env.WIDGET_TEST_LOCATION || widgetConfig.testLocation;
+var widgetTestLocation = process.env.WIDGET_LOCATION || widgetConfig.testLocation;
 
 
 let configSecret = process.env.GLOBAL_SECRET || config.secret;
@@ -321,7 +321,7 @@ sendToUserEmailChannelEmail(projectid, message) {
       var token = jwt.sign(userEmail, configSecret, signOptions); //priv_jwt pp_jwt
       winston.debug("token  "+token);
 
-      var sourcePage = widgetTestLocation + "?tiledesk_projectid=" 
+      var sourcePage = widgetTestLocation + "assets/twp/index.html?tiledesk_projectid=" 
                   + projectid + "&project_name="+encodeURIComponent(project.name)                   
 
       if (message.request.sourcePage) {
@@ -801,7 +801,7 @@ sendUserEmail(projectid, message) {
                   var token = jwt.sign(userAnonym, configSecret, signOptions); //priv_jwt pp_jwt
                   winston.debug("token  "+token);
 
-                  var sourcePage = widgetTestLocation + "?tiledesk_projectid=" 
+                  var sourcePage = widgetTestLocation + "assets/twp/index.html?tiledesk_projectid=" 
                   + projectid + "&project_name="+encodeURIComponent(project.name)                   
 
                   if (message.request.sourcePage) {

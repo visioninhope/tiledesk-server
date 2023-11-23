@@ -34,7 +34,7 @@ router.get('/v5/:project_id', function(req, res) {
         var js, fjs=d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js=d.createElement(s); 
-        js.id=id; js.async=true; js.src="${widgetLocation}/launch.js";
+        js.id=id; js.async=true; js.src="${widgetLocation}launch.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document,'script','tiledesk-jssdk'));
   `;
@@ -43,14 +43,6 @@ router.get('/v5/:project_id', function(req, res) {
 
   res.send(js);
 
-});
-
-
-var widgetTestLocation = process.env.WIDGET_TEST_LOCATION || widgetConfig.testLocation;
-
-router.get('/test/load', function(req, res) {
-  var query = url.parse(req.url).query;
-  res.redirect(widgetTestLocation+'?'+query);
 });
 
 module.exports = router;
