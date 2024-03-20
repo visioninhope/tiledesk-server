@@ -4,6 +4,9 @@
         "data":{
             "LABEL_PLACEHOLDER": "type your message..",
             "LABEL_START_NW_CONV": "New conversation",
+            "LABEL_FIRST_MSG": "Describe shortly your problem, you will be contacted by an agent.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔  All operators are offline at the moment. You can anyway describe your problem. It will be assigned to the support team who will get back to you as soon as possible.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔  Our offices are closed. You can anyway describe your problem. It will be assigned to the support team who will get back to you as soon as possible.",
             "LABEL_WHATSAPP": "Message us",
             "LABEL_SELECT_TOPIC": "Select a topic",
             "LABEL_COMPLETE_FORM": "Complete the form to start a conversation with the next available agent.",
@@ -98,6 +101,9 @@
         "data":{
             "LABEL_PLACEHOLDER": "Scrivi la tua domanda...",
             "LABEL_START_NW_CONV": "Nuova conversazione",
+            "LABEL_FIRST_MSG": "Descrivi sinteticamente il tuo problema, ti metteremo in contatto con un operatore specializzato.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Tutti gli operatori sono offline al momento.Puoi comunque descrivere il tuo problema. Sarà assegnato al team di supporto che ti risponderà appena possibile.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 I nostri uffici sono chiusi. Puoi comunque descrivere il tuo problema. Sarà assegnato al team di supporto che ti risponderà appena possibile.",
             "LABEL_WHATSAPP": "Contattaci",
             "LABEL_SELECT_TOPIC": "Seleziona un argomento",
             "LABEL_COMPLETE_FORM": "Completa il form per iniziare una conversazione con il prossimo agente disponibile.",
@@ -192,6 +198,9 @@
         "data":{
             "LABEL_PLACEHOLDER": "Écrivez votre question ...",
             "LABEL_START_NW_CONV": "Nouvelle conversation",
+            "LABEL_FIRST_MSG": "Décrivez brièvement votre problème, nous vous mettrons en relation avec un opérateur spécialisé.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Tous les opérateurs sont actuellement hors ligne. Vous pouvez toujours décrire votre problème. Il sera attribué à l'équipe d'assistance qui vous répondra dans les plus brefs délais.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Nos bureaux sont fermés. Vous pouvez toujours décrire votre problème. Il sera attribué à l'équipe d'assistance qui vous répondra dans les plus brefs délais.",
             "LABEL_WHATSAPP": "Contactez-nous",
             "LABEL_SELECT_TOPIC": "Sélectionnez un sujet",
             "LABEL_COMPLETE_FORM": "Remplissez le formulaire pour démarrer une conversation avec le prochain agent disponible.",
@@ -286,6 +295,9 @@
         "data":{
             "LABEL_PLACEHOLDER": "escribe tu mensaje..",
             "LABEL_START_NW_CONV": "Nueva conversación",
+            "LABEL_FIRST_MSG":"Describa brevemente su problema, un agente lo contactará.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔 Todos los operadores están desconectados en este momento. En todo caso, puedes describir tu problema que se asignará al equipo de soporte que le responderá lo antes posible.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔 Nuestras oficinas están cerradas. En todo caso, puedes describir tu problema que se asignará al equipo de soporte que le responderá lo antes posible.",
             "LABEL_WHATSAPP": "Envíanos un mensaje",
             "LABEL_SELECT_TOPIC": "Elige un tema",
             "LABEL_COMPLETE_FORM": "Complete el formulario para iniciar una conversación con el próximo agente disponible.",
@@ -380,6 +392,9 @@
         "data":{
             "LABEL_PLACEHOLDER":"Geben Sie Ihre Nachricht ein ...",
             "LABEL_START_NW_CONV":"Neues Gespräch",
+            "LABEL_FIRST_MSG":"Beschreiben Sie in Kürze Ihr Problem. Sie werden von einem Agenten kontaktiert.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔 Alle Betreiber sind derzeit offline. Sie können Ihr Problem trotzdem beschreiben. Es wird dem Support-Team zugewiesen, das Ihnen so schnell wie möglich antwortet.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔 Unsere Büros sind geschlossen. Sie können Ihr Problem trotzdem beschreiben. Es wird dem Support-Team zugewiesen, das Ihnen so schnell wie möglich antwortet.",
             "LABEL_WHATSAPP": "Nachricht an uns",
             "LABEL_SELECT_TOPIC":"Wähle ein Thema",
             "LABEL_COMPLETE_FORM":"Füllen Sie das Formular aus, um ein Gespräch mit dem nächsten verfügbaren Agenten zu beginnen.",
@@ -474,6 +489,9 @@
         "data":{
             "LABEL_PLACEHOLDER":"Digite sua mensagem..",
             "LABEL_START_NW_CONV":"Nova conversa",
+            "LABEL_FIRST_MSG":"Descreva em breve o seu problema, você será contactado por um agente.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔 Todos os operadores estão offline no momento. Em qualquer caso, você pode descrever seu problema. Ele será atribuído à equipe de suporte que responderá o mais breve possível.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔 Nossos escritórios estão fechados. Em qualquer caso, você pode descrever seu problema. Ele será atribuído à equipe de suporte que responderá o mais breve possível.",
             "LABEL_WHATSAPP": "Envie-nos uma mensagem",
             "LABEL_SELECT_TOPIC":"Selecione um topico",
             "LABEL_COMPLETE_FORM":"Preencha o formulário para iniciar uma conversa com o próximo agente disponível.",
@@ -568,6 +586,9 @@
         "data":{
             "LABEL_PLACEHOLDER":"введите ваше сообщение ..",
             "LABEL_START_NW_CONV":"Новый разговор",
+            "LABEL_FIRST_MSG":"Опишите вкратце вашу проблему, с вами свяжется агент.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔 Все операторы на данный момент не в сети. В любом случае вы можете описать свою проблему. Он будет назначен в службу поддержки, которая ответит вам как можно скорее.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔 Наши офисы закрыты. В любом случае вы можете описать свою проблему. Он будет назначен в службу поддержки, которая ответит вам как можно скорее.",
             "LABEL_WHATSAPP": "Напишите нам",
             "LABEL_SELECT_TOPIC":"Выберите тему",
             "LABEL_COMPLETE_FORM":"Заполните форму, чтобы начать разговор со следующим доступным агентом.",
@@ -662,6 +683,9 @@
         "data":{
             "LABEL_PLACEHOLDER":"Mesajınızı yazınız..",
             "LABEL_START_NW_CONV":"Yeni konuşma",
+            "LABEL_FIRST_MSG":"Sorununuzu kısaca açıklayınız, bir temsilci tarafından sizinle iletişime geçilecektir.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔 Şuan tüm operatörler çevrim dışıdır. Yine de sorununuzu tarif edebilirsiniz. Sorununuz size en kısa sürede cevap verebilecek olan destek ekibine iletilecektir.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔 Ofislerimiz kapalıdır. Her halükarda sorununuzu tarif edebilirsiniz. Sorununuz size en kısa sürede cevap verebilecek olan destek ekibine iletilecektir.",
             "LABEL_WHATSAPP": "Bize mesaj gönderin",
             "LABEL_SELECT_TOPIC":"Bir konu seçiniz",
             "LABEL_COMPLETE_FORM":"Sıradaki müsait temsilci ile görüşme başlatmak için formu doldurunuz.",
@@ -758,6 +782,9 @@
         "data":{
             "LABEL_PLACEHOLDER":"откуцај своју поруку..",
             "LABEL_START_NW_CONV":"Нови разговор",
+            "LABEL_FIRST_MSG":"Опишите укратко свој проблем, контактираће вас агент.",
+            "LABEL_FIRST_MSG_NO_AGENTS":"🤔  Сви оператери су тренутно ван мреже. У сваком случају можете описати свој проблем. Биће додељен тиму за подршку који ће вам се јавити што је пре могуће.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED":"🤔  Наше канцеларије су затворене. У сваком случају можете описати свој проблем. Биће додељен тиму за подршку који ће вам се јавити што је пре могуће.",
             "LABEL_WHATSAPP": "Пошаљите нам поруку",
             "LABEL_SELECT_TOPIC":"Изаберите тему",
             "LABEL_COMPLETE_FORM":"Попуните образац да бисте започели разговор са следећим доступним агентом.",
@@ -854,6 +881,9 @@
         "data": {
             "LABEL_PLACEHOLDER": "اكتب رسالتك ..",
             "LABEL_START_NW_CONV": "محادثة جديدة",
+            "LABEL_FIRST_MSG": "صِف مشكلتك بعد قليل ، وسيتواصل معك أحد الوكلاء.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 جميع المشغلين غير متصلين في الوقت الحالي. يمكنك على أي حال وصف مشكلتك. سيتم تعيينه لفريق الدعم الذي سيعود إليك في أقرب وقت ممكن.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 مكاتبنا مغلقة. يمكنك على أي حال وصف مشكلتك. سيتم تعيينه لفريق الدعم الذي سيعود إليك في أقرب وقت ممكن.",
             "LABEL_WHATSAPP": "راسلنا",
             "LABEL_SELECT_TOPIC": "اختر عنوانا",
             "LABEL_COMPLETE_FORM": "أكمل النموذج لبدء محادثة مع الوكيل المتاح التالي.",
@@ -950,6 +980,9 @@
         {
             "LABEL_PLACEHOLDER": "введіть своє повідомлення..",
             "LABEL_START_NW_CONV": "Нова розмова",
+            "LABEL_FIRST_MSG": "Коротко опишіть вашу проблему, з вами зв’яжеться агент.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Усі оператори на даний момент офлайн. Ви все одно можете описати свою проблему. Його буде призначено команді підтримки, яка зв’яжеться з вами якомога швидше.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Наші офіси зачинені. Ви все одно можете описати свою проблему. Його буде призначено команді підтримки, яка зв’яжеться з вами якомога швидше.",
             "LABEL_WHATSAPP": "Напишіть нам",
             "LABEL_SELECT_TOPIC": "Виберіть тему",
             "LABEL_COMPLETE_FORM": "Заповніть форму, щоб почати розмову з наступним доступним агентом.",
@@ -1045,6 +1078,9 @@
         {
             "LABEL_PLACEHOLDER": "skriv ditt meddelande..",
             "LABEL_START_NW_CONV": "Ny konversation",
+            "LABEL_FIRST_MSG": "Beskriv kort ditt problem, du kommer att kontaktas av en agent.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Alla operatörer är offline för tillfället. Du kan hur som helst beskriva ditt problem. Det kommer att tilldelas supportteamet som återkommer till dig så snart som möjligt.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Våra kontor är stängda. Du kan hur som helst beskriva ditt problem. Det kommer att tilldelas supportteamet som återkommer till dig så snart som möjligt.",
             "LABEL_WHATSAPP": "Meddela oss",
             "LABEL_SELECT_TOPIC": "Välj ett ämne",
             "LABEL_COMPLETE_FORM": "Fyll i formuläret för att starta en konversation med nästa tillgängliga agent.",
@@ -1140,6 +1176,9 @@
         {
             "LABEL_PLACEHOLDER": "хабарламаңызды теріңіз..",
             "LABEL_START_NW_CONV": "Жаңа әңгіме",
+            "LABEL_FIRST_MSG": "Мәселеңізді қысқаша сипаттаңыз, сізге агент хабарласады.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Қазіргі уақытта барлық операторлар желіден тыс. Сіз бәрібір мәселеңізді сипаттай аласыз. Ол сізге мүмкіндігінше тезірек хабарласатын қолдау көрсету тобына тағайындалады.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Біздің кеңселер жабық. Сіз бәрібір мәселеңізді сипаттай аласыз. Ол сізге мүмкіндігінше тезірек хабарласатын қолдау көрсету тобына тағайындалады.",
             "LABEL_WHATSAPP": "Бізге хабарлаңыз",
             "LABEL_SELECT_TOPIC": "Тақырыпты таңдаңыз",
             "LABEL_COMPLETE_FORM": "Келесі қолжетімді агентпен сөйлесуді бастау үшін пішінді толтырыңыз.",
@@ -1235,6 +1274,9 @@
         {
             "LABEL_PLACEHOLDER": "xabaringizni yozing..",
             "LABEL_START_NW_CONV": "Yangi suhbat",
+            "LABEL_FIRST_MSG": "Muammoingizni qisqacha tasvirlab bering, siz bilan agent bog'lanadi.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Hozirda barcha operatorlar oflayn. Qanday bo'lmasin, muammoingizni tasvirlashingiz mumkin. Bu sizga imkon qadar tezroq qaytib keladigan qo'llab-quvvatlash guruhiga tayinlanadi.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Bizning ofislarimiz yopiq. Qanday bo'lmasin, muammoingizni tasvirlashingiz mumkin. Bu sizga imkon qadar tezroq qaytib keladigan qo'llab-quvvatlash guruhiga tayinlanadi.",
             "LABEL_WHATSAPP": "Bizga xabar yuboring",
             "LABEL_SELECT_TOPIC": "Mavzuni tanlang",
             "LABEL_COMPLETE_FORM": "Keyingi mavjud agent bilan suhbatni boshlash uchun shaklni to'ldiring.",
@@ -1330,6 +1372,9 @@
         {
             "LABEL_PLACEHOLDER": "mesajınızı yazın..",
             "LABEL_START_NW_CONV": "Yeni söhbət",
+            "LABEL_FIRST_MSG": "Probleminizi qısaca təsvir edin, agent sizinlə əlaqə saxlayacaq.",
+            "LABEL_FIRST_MSG_NO_AGENTS": "🤔 Hazırda bütün operatorlar oflayndır. Hər halda probleminizi təsvir edə bilərsiniz. O, sizə ən qısa zamanda qayıdacaq dəstək komandasına təyin olunacaq.",
+            "LABEL_FIRST_MSG_OPERATING_HOURS_CLOSED": "🤔 Ofislərimiz bağlıdır. Hər halda probleminizi təsvir edə bilərsiniz. O, sizə ən qısa zamanda qayıdacaq dəstək komandasına təyin olunacaq.",
             "LABEL_WHATSAPP": "Bizə mesaj göndərin",
             "LABEL_SELECT_TOPIC": "Mövzu seçin",
             "LABEL_COMPLETE_FORM": "Növbəti mövcud agentlə söhbətə başlamaq üçün formanı doldurun.",
