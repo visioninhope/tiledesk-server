@@ -36,6 +36,42 @@ class RequestService {
     // this.updateSnapshotLead();
     // this.sendMessageUpdateLead();
   }
+  updateSnapshotLead() {
+    leadEvent.on('lead.update', function (lead) {
+      setImmediate(() => {
+        winston.debug("updateSnapshotLead on lead.update ", lead);
+
+        Request.updateMany({ lead: lead._id, id_project: lead.id_project }, { "$set": { "snapshot.lead": lead } }, function (err, updates) {
+          if (err) {
+            winston.error("Error updating requests updateSnapshotLead", err);
+            return 0;
+          }
+          winston.verbose("updateSnapshotLead updated for " + updates.nModified + " request")
+          requestEvent.emit('request.update.snapshot.lead', { lead: lead, updates: updates });
+          return;
+        });
+        // Request.find({lead: lead._id, id_project: lead.id_project}, function(err, requests) {
+
+        //     if (err) {
+        //         winston.error("Error getting request by lead", err);
+        //         return 0;
+        //     }
+        //     if (!requests || (requests && requests.length==0)) {
+        //         winston.warn("No request found for lead id " +lead._id );
+        //         return 0;
+        //     }
+
+        //     requests.forEach(function(request) {
+
+
+        //     });
+
+        // });
+
+
+      });
+    });
+  }
 
       // 12 marzo 2024 I disabled these two functions due to performance problems for a chatbot created by Sponziello "Community bots Sendinblue Hubspot Qapla)"
   // updateSnapshotLead() {
