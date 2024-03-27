@@ -65,32 +65,59 @@ describe('KbSettingsRoute', () => {
 
         });
 
-        it('createKbSettingsIfNotExists', (done) => {
+        // no longer valid
+        // it('createKbSettingsIfNotExists', (done) => {
+
+        //     var email = "test-signup-" + Date.now() + "@email.com";
+        //     var pwd = "pwd";
+
+        //     userService.signup(email, pwd, "Test Firstname", "Test lastname").then(function (savedUser) {
+        //         projectService.create("test-faqkb-create", savedUser._id).then(function (savedProject) {
+
+        //             chai.request(server)
+        //                 .get('/' + savedProject._id + "/kbsettings")
+        //                 .auth(email, pwd)
+        //                 .end((err, res) => {
+        //                     if (log) { console.log("get kbsettings res.body: ", res.body); }
+        //                     res.should.have.status(200);
+        //                     res.body.should.be.a('object');
+        //                     expect(res.body.id_project).to.equal(savedProject._id.toString())
+        //                     expect(res.body.maxKbsNumber).to.equal(3);
+        //                     expect(res.body.maxPagesNumber).to.equal(1000);
+        //                     expect(res.body.kbs).is.an('array').that.is.empty;
+
+        //                     done();
+        //                 })
+        //         });
+        //     });
+
+        // });
+
+        it('getEmptyKbSettings', (done) => {
 
             var email = "test-signup-" + Date.now() + "@email.com";
             var pwd = "pwd";
 
-            userService.signup(email, pwd, "Test Firstname", "Test lastname").then(function (savedUser) {
-                projectService.create("test-faqkb-create", savedUser._id).then(function (savedProject) {
+            userService.signup(email, pwd, "Test Firstname", "Test Lastname").then((savedUser) => {
+                projectService.create("test-kb-create", savedUser._id).then((savedProject) => {
 
                     chai.request(server)
-                        .get('/' + savedProject._id + "/kbsettings")
+                        .get('/' + savedProject._id + '/kbsettings')
                         .auth(email, pwd)
                         .end((err, res) => {
-                            if (log) { console.log("get kbsettings res.body: ", res.body); }
+
+                            if (log) { console.log("res.body: ", res.body); }
                             res.should.have.status(200);
                             res.body.should.be.a('object');
-                            expect(res.body.id_project).to.equal(savedProject._id.toString())
-                            expect(res.body.maxKbsNumber).to.equal(3);
-                            expect(res.body.maxPagesNumber).to.equal(1000);
-                            expect(res.body.kbs).is.an('array').that.is.empty;
+                            expect(res.body).is.an('object').that.is.empty;
 
                             done();
                         })
-                });
-            });
+                })
+            })
+        })
 
-        });
+        // it('deleteEmptyKbSettingsOnGet')
 
 
         it('addKbToKbSettings', (done) => {
