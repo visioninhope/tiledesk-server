@@ -97,11 +97,14 @@ router.put('/:projectid/update', function (req, res) {
   try {
     let decoded = jwt.verify(token, configSecret)
     winston.debug("user decode: ", decoded);
+    console.log("user decode: ", decoded);
 
     if (!process.env.ADMIN_EMAIL) {
       winston.warn("Missing admin email parameter in environment");
       return res.status(401).send({ success: false, error: "Missing admin email parameter"});
     }
+
+    console.log("ADMIN_EMAIL: ", process.env.ADMIN_EMAIL);
 
     if (decoded.email !== process.env.ADMIN_EMAIL) {
       winston.warn("Profile modification: permission denied.");
@@ -242,7 +245,8 @@ router.put('/:projectid/update', function (req, res) {
     });
   
   } catch (err) {
-    winston.warn("Profile modification: permission denied.");
+    console.error("err decoding: ", err)
+    winston.warn("Profile modification: permission denied. Can't decode token.");
     res.status(403).send({ success: false, error: "You don't have the permission required to modify the project profile"});
   }
 
