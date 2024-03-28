@@ -43,20 +43,25 @@ describe('KbSettingsRoute', () => {
                             res.body.should.be.a('object');
                             expect(res.body.id_project).to.equal(savedProject._id.toString());
 
-                            chai.request(server)
-                                .get('/' + savedProject._id + "/kbsettings")
-                                .auth(email, pwd)
-                                .end((err, res) => {
-                                    if (log) { console.log("get kbsettings res.body: ", res.body); }
-                                    res.should.have.status(200);
-                                    res.body.should.be.a('object');
-                                    expect(res.body.id_project).to.equal(savedProject._id.toString())
-                                    expect(res.body.maxKbsNumber).to.equal(3);
-                                    expect(res.body.maxPagesNumber).to.equal(1000);
-                                    expect(res.body.kbs).is.an('array').that.is.empty;
+                            done();
 
-                                    done();
-                                })
+                            /**
+                             * For old version
+                             */
+                            // chai.request(server)
+                            //     .get('/' + savedProject._id + "/kbsettings")
+                            //     .auth(email, pwd)
+                            //     .end((err, res) => {
+                            //         if (log) { console.log("get kbsettings res.body: ", res.body); }
+                            //         res.should.have.status(200);
+                            //         res.body.should.be.a('object');
+                            //         expect(res.body.id_project).to.equal(savedProject._id.toString())
+                            //         expect(res.body.maxKbsNumber).to.equal(3);
+                            //         expect(res.body.maxPagesNumber).to.equal(1000);
+                            //         expect(res.body.kbs).is.an('array').that.is.empty;
+
+                            //         done();
+                            //     })
 
                         })
 
@@ -117,7 +122,91 @@ describe('KbSettingsRoute', () => {
             })
         })
 
-        // it('deleteEmptyKbSettingsOnGet')
+        it('deleteEmptyKbSettingsOnGet', (done) => {
+
+            var email = "test-signup-" + Date.now() + "@email.com";
+            var pwd = "pwd";
+
+            userService.signup(email, pwd, "Test Firstname", "Test lastname").then((savedUser) => {
+                projectService.create("test-faqkb-create", savedUser._id).then((savedProject) => {
+
+                    chai.request(server)    
+                        .post('/' + savedProject._id + '/kbsettings')
+                        .auth(email, pwd)
+                        .send({})
+                        .end((err, res) => {
+                            if (log) { console.log("create kbsettings res.body: ", res.body); }
+                            res.should.have.status(200);
+                            res.body.should.be.a('object');
+
+                            chai.request(server)
+                                .get('/' + savedProject._id + "/kbsettings")
+                                .auth(email, pwd)
+                                .end((err, res) => {
+                                    if (log) { console.log("get kbsettings res.body: ", res.body); }
+
+                                    res.should.have.status(200);
+                                    expect(res.body).is.an('object').that.is.empty;
+
+                                    done();
+
+                                })
+
+                        })
+                })
+            })
+        })
+
+        it('dontDeleteKbSettingsOnGet', (done) => {
+
+            var email = "test-signup-" + Date.now() + "@email.com";
+            var pwd = "pwd";
+
+            userService.signup(email, pwd, "Test Firstname", "Test lastname").then((savedUser) => {
+                projectService.create("test-faqkb-create", savedUser._id).then((savedProject) => {
+
+                    chai.request(server)    
+                        .post('/' + savedProject._id + '/kbsettings')
+                        .auth(email, pwd)
+                        .send({})
+                        .end((err, res) => {
+                            if (log) { console.log("create kbsettings res.body: ", res.body); }
+                            res.should.have.status(200);
+                            res.body.should.be.a('object');
+
+                            let settings_id = res.body._id;
+
+                            chai.request(server)
+                                .post('/' + savedProject._id + "/kbsettings/" + settings_id)
+                                .auth(email, pwd)
+                                .send({ name: "exampleurl.com/kb/", url: "https://exampleurl.com/kb/" })
+                                .end((err, res) => {
+
+                                    if (log) { console.log("add kb to kbsettings res.body: ", res.body); }
+                                    res.should.have.status(200);
+
+                                    chai.request(server)
+                                        .get('/' + savedProject._id + "/kbsettings")
+                                        .auth(email, pwd)
+                                        .end((err, res) => {
+                                            if (log) { console.log("get kbsettings res.body: ", res.body); }
+
+                                            res.should.have.status(200);
+                                            expect(res.body.kbs[0].name).to.equal("exampleurl.com/kb/")
+
+                                            done();
+
+                                        })
+
+
+                                })
+
+                            
+
+                        })
+                })
+            })
+        })
 
 
         it('addKbToKbSettings', (done) => {
@@ -235,9 +324,9 @@ describe('KbSettingsRoute', () => {
                                     if (log) { console.log("add kb to kb settings res.body: ", res.body); }
                                     res.should.have.status(200);
                                     res.body.should.be.a('object');
-                                    //expect(res.body.kbs).to.have.length(1)
+                                    expect(res.body.kbs).to.have.length(1)
 
-                                    let kb_to_delete_id = res.body._id;
+                                    let kb_to_delete_id = res.body.kbs[0]._id;
 
                                     chai.request(server)
                                         .post('/' + savedProject._id + "/kbsettings/" + settings_id)
