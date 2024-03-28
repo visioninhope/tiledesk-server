@@ -241,7 +241,7 @@ router.put('/:projectid/update', function (req, res) {
     });
   
   } catch (err) {
-    winston.warn("Profile modification: permission denied.");
+    winston.warn("Profile modification: permission denied. Can't decode token.");
     res.status(403).send({ success: false, error: "You don't have the permission required to modify the project profile"});
   }
 
