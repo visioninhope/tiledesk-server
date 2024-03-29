@@ -686,7 +686,7 @@ class RulesTrigger {
 
             try {
     
-              winston.debug('triggerEventEmitter eventTrigger:', eventTrigger);
+              winston.info('triggerEventEmitter eventTrigger:', eventTrigger);
 
 
               winston.debug('runAction eventTrigger.eventSuccess:', eventTrigger.eventSuccess);
@@ -711,11 +711,11 @@ class RulesTrigger {
   
 
 
-              var startText = "\\start";
+              var startText = "/start";
               if (action.parameters && action.parameters.text) {
                 startText = action.parameters.text;
               }
-              winston.debug('runAction action startText: ' + startText);
+              winston.info('runAction action startText: ' + startText);
 
 
               // reroute(request_id, id_project, nobot) {
