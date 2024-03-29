@@ -290,7 +290,7 @@ router.post('/signinWithCustomToken', [
       
     }    
   
-
+ 
 
     if (req.user.role) {
       role = req.user.role;
