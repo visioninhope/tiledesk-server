@@ -26,7 +26,7 @@ const { check, validationResult } = require('express-validator');
 var UserUtil = require('../utils/userUtil');
 
 let configSecret = process.env.GLOBAL_SECRET || config.secret;
-var pKey = process.env.GLOBAL_SECRET_OR_PUBLIC_KEY;
+var pKey = process.env.GLOBAL_SECRET_OR_PUB_KEY;
 // console.log("pKey",pKey);
 
 if (pKey) {
