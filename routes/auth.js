@@ -26,7 +26,7 @@ const { check, validationResult } = require('express-validator');
 var UserUtil = require('../utils/userUtil');
 
 let configSecret = process.env.GLOBAL_SECRET || config.secret;
-var pKey = process.env.GLOBAL_SECRET_OR_PRIVATE_KEY;
+var pKey = process.env.GLOBAL_SECRET_OR_PUB_KEY;
 // console.log("pKey",pKey);
 
 if (pKey) {
@@ -71,8 +71,9 @@ router.post('/signup',
     return res.json({ success: false, msg: 'Please pass email and password.' });
   } else {    
     return userService.signup(req.body.email, req.body.password, req.body.firstname, req.body.lastname, false)
-      .then(function (savedUser) {
-        
+      .then(async function (savedUser) {
+
+
         winston.debug('-- >> -- >> savedUser ', savedUser.toObject());
 
         // let skipVerificationEmail = false;
@@ -81,6 +82,8 @@ router.post('/signup',
         //   let token = req.headers.authorization.split(" ")[1];
         //   let decode = jwt.verify(token, configSecret)
         //   if (decode && (decode.email === process.env.ADMIN_EMAIL)) {
+        //     let updatedUser = await User.findByIdAndUpdate(savedUser._id, { emailverified: true }, { new: true }).exec();
+        //     winston.debug("updatedUser: ", updatedUser);
         //     skipVerificationEmail = true;
         //     winston.verbose("skip sending verification email")
         //   }
@@ -95,6 +98,7 @@ router.post('/signup',
         if (!req.body.disableEmail){
             emailService.sendVerifyEmailAddress(savedUser.email, savedUser);
         }
+        
 
 
         /*
@@ -286,7 +290,7 @@ router.post('/signinWithCustomToken', [
       
     }    
   
-
+ 
 
     if (req.user.role) {
       role = req.user.role;
@@ -320,7 +324,7 @@ router.post('/signinWithCustomToken', [
             // Bug with email in camelcase
             newUser = await userService.signup(req.user.email.toLowerCase(), uuidv4(), req.user.firstname, req.user.lastname, false);
            } catch(e) {
-            winston.debug('error signup already exists??: ')
+            winston.info('error signup already exists??: ')
 
             if (e.code = "E11000") {
               newUser = await User.findOne({email: req.user.email.toLowerCase(), status: 100}).exec();
@@ -369,7 +373,7 @@ router.post('/signinWithCustomToken', [
             return res.status(401).send({ success: false, msg: 'User not found.' });
            }
 
-           winston.debug('userToReturn forced to newUser.', newUser)
+           winston.info('userToReturn forced to newUser.', newUser)
            userToReturn=newUser;
 
           
