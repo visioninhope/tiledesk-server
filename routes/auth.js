@@ -26,11 +26,17 @@ const { check, validationResult } = require('express-validator');
 var UserUtil = require('../utils/userUtil');
 
 let configSecret = process.env.GLOBAL_SECRET || config.secret;
-var pKey = process.env.GLOBAL_SECRET_OR_PUB_KEY;
+var pKey = process.env.GLOBAL_SECRET_OR_PRIVATE_KEY;
 // console.log("pKey",pKey);
 
 if (pKey) {
   configSecret = pKey.replace(/\\n/g, '\n');
+}
+
+let pubConfigSecret = process.env.GLOBAL_SECRET || config.secret;
+var pubKey = process.env.GLOBAL_SECRET_OR_PUB_KEY;
+if (pubKey) {
+  pubConfigSecret = pKey.replace(/\\n/g, '\n');
 }
 
 var recaptcha = require('../middleware/recaptcha');
@@ -80,7 +86,7 @@ router.post('/signup',
         if (req.headers.authorization) {
 
           let token = req.headers.authorization.split(" ")[1];
-          let decode = jwt.verify(token, configSecret)
+          let decode = jwt.verify(token, pubConfigSecret)
           if (decode && (decode.email === process.env.ADMIN_EMAIL)) {
             let updatedUser = await User.findByIdAndUpdate(savedUser._id, { emailverified: true }, { new: true }).exec();
             winston.debug("updatedUser: ", updatedUser);
